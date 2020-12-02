@@ -6,7 +6,7 @@ using WebApi.Models;
 
 namespace WebApi.Services
 {
-    public interface IClienteServices
+    public interface IClientesServices
     {
         IEnumerable<Clientes> getClientes();
         Clientes getClientesById(int id);

@@ -14,22 +14,22 @@ namespace WebApi.Controllers
     [ApiController]
     public class ClientesController : Controller
     {
-        private readonly IClienteServices _clienteServices;
-        public ClientesController(IClienteServices clienteServices)
+        private readonly IClientesServices _clienteServices;
+        public ClientesController(IClientesServices clienteServices)
         {
             _clienteServices = clienteServices;
         }
 
         [HttpGet]
 
-        public IEnumerable<Clientes> GetClientes()
+        public IEnumerable<Clientes> getClientes()
         {
             return _clienteServices.getClientes();
         }
 
         [HttpGet("{id}")]
 
-        public ActionResult<Clientes> GetClienteById(int id)
+        public ActionResult<Clientes> getClientesById(int id)
         {
             var clientes = _clienteServices.getClientesById(id);
 

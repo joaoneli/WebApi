@@ -7,11 +7,11 @@ using WebApi.Repositories;
 
 namespace WebApi.Services
 {
-    public class ClienteServices : IClienteServices
+    public class ClientesServices : IClientesServices
     {
 
         private readonly IClientesRepository _clienteRepository;
-        public ClienteServices(IClientesRepository clienteRepository)
+        public ClientesServices(IClientesRepository clienteRepository)
         {
             _clienteRepository = clienteRepository;
         }
