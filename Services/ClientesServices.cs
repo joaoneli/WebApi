@@ -15,7 +15,7 @@ namespace WebApi.Services
         {
             _clienteRepository = clienteRepository;
         }
-        public IEnumerable<Clientes> getClientes()
+        public List<Clientes> getClientes()
         {
             return _clienteRepository.getClientes();
         }

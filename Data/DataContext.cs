@@ -11,6 +11,7 @@ namespace WebApi.Data
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
+
         public DbSet<Clientes> Cliente { get; set; }
 
         public DbSet<Fornecedores> Fornecedores { get; set; }

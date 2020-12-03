@@ -8,7 +8,7 @@ namespace WebApi.Services
 {
     public interface IClientesServices
     {
-        IEnumerable<Clientes> getClientes();
+        List<Clientes> getClientes();
         Clientes getClientesById(int id);
     }
 }

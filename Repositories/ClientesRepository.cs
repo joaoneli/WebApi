@@ -15,7 +15,7 @@ namespace WebApi.Repositories
             _context = context;
         }
 
-        public IEnumerable<Clientes> getClientes()
+        public List<Clientes> getClientes()
          {
              return _context.Cliente.ToList();
          }

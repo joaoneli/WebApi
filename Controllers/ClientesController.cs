@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApi.Models;
-using WebApi.Repositories;
 using WebApi.Services;
 
 namespace WebApi.Controllers
@@ -22,9 +21,15 @@ namespace WebApi.Controllers
 
         [HttpGet]
 
-        public IEnumerable<Clientes> getClientes()
+        public ActionResult<List<Clientes>> getClientes()
         {
-            return _clienteServices.getClientes();
+
+            var clientes = _clienteServices.getClientes();
+            if (clientes == null)
+            {
+                return NotFound("Nenhum cliente encontrado");
+            }
+            return Ok(clientes);
         }
 
         [HttpGet("{id}")]
@@ -37,7 +42,7 @@ namespace WebApi.Controllers
             {
                 return NotFound("Nenhum cliente encontrado");
             }
-            return clientes;
+            return Ok(clientes);
         }
 
     }
